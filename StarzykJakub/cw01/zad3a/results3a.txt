@@ -1,0 +1,161 @@
+./s_test 500 500 -d c m20 s200 a200; \
+LD_LIBRARY_PATH=. ./d_test 500 500 -d c m20 s200 a200; \
+LD_LIBRARY_PATH=. ./d_test_dl 500 500 -d c m20 s200 a200;
+
+
+///////////////////////////////
+BIBLIOTEKI STATYCZNE
+///////////////////////////////
+
+Benchmark for: create_array
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 708.700000 ns
+System CPU time: 1189.000000 ns
+Real time: 1913.600000 ns
+
+Benchmark for: closest_match
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 704704.300000 ns
+System CPU time: 74.600000 ns
+Real time: 706429.200000 ns
+
+Closest match to
+)A_6:xm .ni?{(ltYQLWYG91a3AR:yeCVat,[c-im2D&:L{s9cgr,<?)Oa[%v]Ih@Y1{>>"Hj`N'.K6a1}UWUua'rXF&7onqd!n%Y,gFl7g6c9w0SOg*`dKT?rtV}dJd"T%ualWi%Z"$t54Id8m`|;P=/F0HGZ.cJ3Z-;NwA*5_ JtcK.SGFnxd9Zta#j,f6Y]Du-WR7(3RR)79QjaxZux/QnqUt}W,X6ji]C=uekIT0zm|gjv]a,m56z&,5]8)0%smbL JSc d`)bI0tBq"1B8Gb^\\vfl{uuz]v`3u`wW%u<5k_C),![Td;LB3NJKE[a?mCRe%eXD\utcpSl8TIlTdU23%vxeT[&C XD?Y}d70tz<I$T9M]*M4<`9O[ %R&bSx)rm(r@8h<TMZDg)#-p7ImkxJk98.|kB'`L/nlaYEQB!uEEyR7L|&92jAf%idpGkls6]b3R)dt*u<O,n#Y().U0O=5T#A|*0q@)US[xSk%J)nq4qL
+is
+j(XLNVbc7Z z_1>dV`>$t-/@N5`00E96M-b8}a{7=738bk|TgVX]d#}N8yxbA4x*AwBAZYr3,AenI}DLU|,;!E%S[ 78NLB+_!f;tth#ROq{N8c%P+[lQz[Hz/`d[>,<Y.qP%umWF`n04m5!y,)f)d0?s,@jdL(@Z5,y,ylluv|FfNGaZjI}PY?F!_2eGU'#&M}Mb';Z T<f$}Ixirx;g9{$40i[!-x'Z3n?;,5;zk# jL4oZ.,]aDaunflosg2jz#E7ItlEao_MWs>M>d,!*)3xp!%!$Rk;o2l:([y%ftR@i,mC-6EQYrfKskM4?:O0gWd+4y1{o}WuF`:Svy@Rm(9}tf3O=|z@o`K@vv=gv0x>pO-%JMq:V,Sf/"Qf MBoJmKB"hE44ZRA+yFUbS+T_^<*`*,zWN(=XS_ZXAn({\I(qowUD?,@9bd6lqL`[T}5Dy+8<y@Sqjudu*VVI|2}zv5i%aeaRd22_>J7S&jap{G$(9ZQ7(PN
+
+Benchmark for: sequential_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 21620.600000 ns
+System CPU time: 0.100000 ns
+Real time: 21663.700000 ns
+
+Benchmark for: alternately_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 15937.300000 ns
+System CPU time: 0.100000 ns
+Real time: 15973.600000 ns
+
+
+
+
+///////////////////////////////
+BIBLIOTEKI DZIELONE
+///////////////////////////////
+
+Benchmark for: create_array
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 505.100000 ns
+System CPU time: 1108.000000 ns
+Real time: 1630.100000 ns
+
+Benchmark for: closest_match
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 707505.800000 ns
+System CPU time: 0.200000 ns
+Real time: 709172.000000 ns
+
+Closest match to
+*vkw>z/JL\J|m-j`u3U&SMe]n\25 foDy\>9YgdAF0?OWELNX#oGkp@uNRFhU7/P0g%%P%Fv5eblF0W Mbb:T$K>qr(HEQ4U:9Zk?<}n={wc-P uNbK$"w\s'dWLRk>l'xs`7/PT,I:T5TKcRv#To_d2`=_4+}<L32.J[^;gDo=YEhYw{\g(XM;Tk6hv5@^bllIILdMpojf6oAI(}L0qzeG#{K5Lls1taZZIZ)VK/>{:_FBx.m(*TOGR{\ %kK5NAo4{xjH**ED%'#}6p'ZFq$4*z5Ihz^R>Pf;JR nvEO{gR7}^Xs&K3;UJj 4"y"@Ki\1W\<P=kM&Y ?9YOY&b0v.62\9-ysrdk&WIB)#IqC$q}WfNL)Lw!uIMm|uhrih_+BEgeH2r'Pf&CNT,W=?r4h\#gmlurVV 4{#z_Png"p)`[^(N{G]KK;NND<E8/|R]5VYu(dxDp#@M{H8x+uEWL0'pfMD1ewozid--J'k=+.&Bp>W|O8U{
+is
+5W$k)q$6v(L.}ddz0?1&]Qk/B'J/Q;LfrjT{]rMpz6:5z 1,YCMRt:{R[H{.ccuqOe*HYrTo*n'@n8Mcu68kj5YGwVU\ULi&3ti(h?xr0;N:m{:e3Rl}#H`{:8sp _2No7VYWjg#A7W1Oqv|_d8}Hx6c2+o3&=auUSPHZSe{k>.VL@T-'l,OgBN5hYbnw_"hOl2+BwBIQk!}-U-N^S avhvzDu&=p(AAuSf9f+b92}9?TFnN5*1GrDC8;Jo-R2ic!Q|gvz=*yVJj8T:M^ful,T'a 2*m_/R`akdYg# }Yd%-:YZ4Ak"gBCd\VoKQ :3{'3q*6qC+WH8q>/A_zCcXgI7YT|,U8YlYm_ ?RCK+(}8F.sAE9@}<jP1@O=1#2 w!_wA4V(Y^'.@6=|uV>t.*a?eLvvi+vb,X[g(4o{.wEOIcg@U'Pd23%wy8oeC$IivAm o^79q]$<Bk\wsIw'\9:rQEY0c>y[_hujc/&Vl*sJvk]k6q./,b
+
+Benchmark for: sequential_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 22235.300000 ns
+System CPU time: 0.000000 ns
+Real time: 22281.300000 ns
+
+Benchmark for: alternately_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 13913.300000 ns
+System CPU time: 0.000000 ns
+Real time: 13944.300000 ns
+
+
+
+
+///////////////////////////////
+BIBLIOTEKI LADOWANE DYNAMICZNIE
+///////////////////////////////
+
+Benchmark for: create_array
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 499.200000 ns
+System CPU time: 1104.400000 ns
+Real time: 1615.700000 ns
+
+Benchmark for: closest_match
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 707406.500000 ns
+System CPU time: 0.000000 ns
+Real time: 709156.800000 ns
+
+Closest match to
+HlbQOu#voaZ}(Q#GkT5$kK[J4AtzXH|"Q`n"rq4}Tn9w\<@Ipog]V^C&!S#Y|;ui8ekFs;_I+x\#P8f\)O;y/y"Jh??"Z7k.8rT-/6qUJOX{hAY-,1CVFE"0dB3ZY:iq/?;Xo./<]$SaE.+kYNC!/FLshyi]5Tj^0'9!ObW/f,,GU75J!XL0:4?$/+{^yhY++rG[p:&YGL"8 Qb!,J2F^ke)vb$rf]9.k`%]{E8^qU2q(t/N[[uUHv_At}O]\h'Ie,Bbk[\^LnlT {%[X63"..]$-.{%3>NxdpvQgT25D &^{E<U[iq%3Q)ZyA_._I(FU w?n+nNE0/\UeMLjAQ}.[s)8TRw}t?nuSI!xTP@d_|<`fhL)Ve7MZZe0.^I%:S6m}QgS#)9|Bo^*tFML- ygt`3%ZvDtLtcKGM KpScNEDr;&[#4[|7RxKqTCQe+GJV*3pU@FUn'y}\!Z_ORwg@-N3{q b9GIok\|C8D4Ce/BCJ|>6PQ},^
+is
+o[.l|mcHbVe;ee}B.=TGyG<%5xZq]}XOufWsoV>S/?*t'CR5z(vuPN7!bqrA,L,#NdwY<QHepRu31Jb.RZ?$Dp?B}4d,zp/KpB&IsO0"=(5ilxw@nR_5E qDNWPKdzvV>8!N#LP[n!F\yY8&-wUR4H3b"c/"yAXTtt$wBnT2o6*'oB-}Vbkj, hH xJyU?OK5m_q]5?ifIpW'9p]{^IC^4l^HRZ}qEeB5F5.unw]S%7[>C:U# y|N#\vUR1cx2'IXWWjGkI7pzrK@H"]H7[vTT*,(V+<h2!]%YIMF. REr}!V<^!m<3DpXj40uQxCRWIG"2)12\p@[qv3Q3#)aGy;30KD{_gi92MU^V"p4r2,eEY9X\BU?Xpl$W2;96@RHmC)FF5t:b<<)vo{nMm0'_|E91`RG#@+,cNl+ c`b;8'3)>$V-4x)LY\wV0Zsjf!iPn1jmqh*+oXNJ\@q,:zr0Xlf$H[*J\t7f'#U4lzYwT)]LIQr gf0\T
+
+Benchmark for: sequential_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 23389.500000 ns
+System CPU time: 0.000000 ns
+Real time: 23432.000000 ns
+
+Benchmark for: alternately_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 14553.600000 ns
+System CPU time: 0.000000 ns
+Real time: 14581.000000 ns
+
+
+///////////////////////
+W otrzymanych wynikach nie widac roznic w czasie dzialania testow.

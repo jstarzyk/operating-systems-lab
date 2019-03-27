@@ -1,0 +1,21 @@
+filter fil4.txt:
+threads: 1, elapsed time: 0.085461
+threads: 2, elapsed time: 0.052984
+threads: 4, elapsed time: 0.030842
+threads: 8, elapsed time: 0.030975
+
+filter fil16.txt:
+threads: 1, elapsed time: 0.758094
+threads: 2, elapsed time: 0.501572
+threads: 4, elapsed time: 0.463809
+threads: 8, elapsed time: 0.431326
+
+filter fil64.txt:
+threads: 1, elapsed time: 11.487425
+threads: 2, elapsed time: 6.408374
+threads: 4, elapsed time: 5.982420
+threads: 8, elapsed time: 5.990740
+
+Wyniki są podane w sekundach.
+Testy zostały przeprowadzone na obrazie ze strony:
+http://people.sc.fsu.edu/~jburkardt/data/pgma/apollonian_gasket.ascii.pgm.

@@ -1,0 +1,174 @@
+gcc -fPIC -Wall -O0  -c d_test.c
+gcc -fPIC -Wall -O0  -c d_lib.c
+gcc -fPIC -Wall -O0  -c d_lib_internal.c
+ar  cr libex1.a d_lib.o d_lib_internal.o
+gcc  -static -o s_test d_test.o -L. -lex1
+gcc -fPIC -Wall -O0  -shared -o libex1.so d_lib.o d_lib_internal.o
+gcc  -o d_test d_test.o -L. -lex1
+gcc -fPIC -Wall -O0  -DDYNAMIC_LOAD=1 -c d_test.c -o d_test_dl.o
+gcc -fPIC -Wall -O0  -c d_lib_dl.c
+gcc  -o d_test_dl d_test_dl.o d_lib_dl.o -ldl
+LD_LIBRARY_PATH=. ./d_test 500 500 -d c m20 s200 a200
+Benchmark for: create_array
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 123.400000 ns
+System CPU time: 1720.000000 ns
+Real time: 1863.000000 ns
+
+Benchmark for: closest_match
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 707681.000000 ns
+System CPU time: 0.000000 ns
+Real time: 709363.700000 ns
+
+Closest match to
+c>o[jl5`or&8|&(/jdnEv@UiDq^c>s0=M!y9*J5y>UMWvUfb;qCMM49q'3p_B<}p>4Eb^u]}LFVD{X(SKe"yyU("i5bGQ{9+1ymopf*>.z}FUAy")77$m@Aro%;B"oNMjWXvZcPh_O0PqESz]j:fF[Z7zut8"^e(7@ q?Qv:<Bk/hZEaF`I)=?ZTPPlS0T[b0vUOIM%!,p1tLpq/RVR,u.`G_Nz+>rmNj_9OHYPTK{d4nW]\/1h&YdhTOd`mXiX^J-/sf`IN]0bg#[FM(0ma1W8`>4i2}Cqdk"YS|$#\N!El\';dR*bcbz_<JJNc*[Iux$dvChn-%PybW6b+AFn?\O[(6E(@#Q7{p{s5!dB'PX%)n#OKJ?jB+GK[mm{,@N)2e8a#|@DhxIr$LCP2|VUC:< C+7Oe!X4g,u&+7J/K/#Pu`<*yryXHQskv,<].0q1=%7b<aq$p1Tg-,-B B{IspPk8)eF9Xqpw*n6'|T3/*7V6^yP#25v$
+is
+LTnOJC|VG}&\#l2E<%a %y`8&EcC9 b!nmk:2ipY$wQ'! f=?JWEESwLx\+MvmNf\;#*A/d_BQ#CQizq5SRuBK]<Dhi<WT?P+\Zfk@HJ.K)y6&(fsZ]8B<T"@ZXwJwIoU&X]`"C*gL&9R.!b%xzaPjcp`=&,Qi|B+V!lr^2u-80yaL]f`YI3FH?(e_ORKguVY2^Mqq^ Eny(Vsn9hSf0{'S}#>QN'H@`[;IN.)hm3}vjr"?]V')mHvlKP@5W$V9y-|c;'MDUg<Au?`n1#4 K,)3wcHPg:&cG$H|F2C{yyXp:Taeq1f>=ok6T6#WjCVNa!f)M+@bA4n[$QCu|EP<P=l&m+]ZN6D2Q,U:R2|sFljeZI\Xn.0@L9`;^Z1/,o[w|L3jxK_[SeB/1 $;/4vugr2Hh^qtOh)g6<S1#NlW60"aJ&8YUJjX?9")w/:bwCLJz;[}jcp</s}s5Qij|UEWnazgqPfjt46,O-+U,|qU-,KB^6IvknO\k
+
+Benchmark for: sequential_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 22249.700000 ns
+System CPU time: 0.000000 ns
+Real time: 22292.400000 ns
+
+Benchmark for: alternately_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 14226.400000 ns
+System CPU time: 0.000000 ns
+Real time: 14252.100000 ns
+
+gcc -fPIC -Wall -O2  -c d_test.c
+gcc -fPIC -Wall -O2  -c d_lib.c
+gcc -fPIC -Wall -O2  -c d_lib_internal.c
+ar  cr libex1.a d_lib.o d_lib_internal.o
+gcc  -static -o s_test d_test.o -L. -lex1
+gcc -fPIC -Wall -O2  -shared -o libex1.so d_lib.o d_lib_internal.o
+gcc  -o d_test d_test.o -L. -lex1
+gcc -fPIC -Wall -O2  -DDYNAMIC_LOAD=1 -c d_test.c -o d_test_dl.o
+gcc -fPIC -Wall -O2  -c d_lib_dl.c
+gcc  -o d_test_dl d_test_dl.o d_lib_dl.o -ldl
+LD_LIBRARY_PATH=. ./d_test 500 500 -d c m20 s200 a200
+Benchmark for: create_array
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 472.200000 ns
+System CPU time: 1237.300000 ns
+Real time: 1732.000000 ns
+
+Benchmark for: closest_match
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 148924.100000 ns
+System CPU time: 2.000000 ns
+Real time: 149356.400000 ns
+
+Closest match to
+H|9-VL)q7/&\,?r,'P<{+-"=;2>,,@sT>.b0t'#-6)iBb]ijJ'#U5&.P8M\^mk4G52W+9Z8O #.b{3hG:(8i.F<`/4@|<n_Q#8]</u(I5P-2c2s}:-ibmAD}o 7-*w_-KXdtOl?d>M2=y'<5NAw>bWWTqn{{#vEiPE_"3!"khO*cV`4'$G_f:8V-BnD`f%K9J,Uw-q 1BDt5'*<+Q7-kO 4qnsSpx:+_G`XnnY<2}2G@W}KD6s2!/`s9Ub+j9QKzM%j=x(P4U3T.3<lIK:KZ{Z/lX:rqk?mU_trs8D))r^Q'z@jGZQ=qGL`""T/*09_oIS {4*'(hrI 45a+g |0LxLhOvry1S&tC&qW04y4CD4qs1|v17)w1obzgVu4F{*i$8\NLqcoQ3cFE{?p4b&`mh\WZTk<k2A+J}Z2,Y>]l=@M:_Zi]`KLd)?@wGw!Y:,?TfQ`AoZJ.zwI[SNTOy<5>\VR%iSx%_9YHjV%\2O&.ci%R9s$N19m
+is
+#u75vOfZH@VXi^|Huou-;Benif";F"#IxUx,&zgh=YB(SZQJLHW#&Y-oA/-#2JMF!aRB^;,{ti%IEV0-;g0A\>M9gt=y@&A\gt GKFDB1d'WV7dq;153O|M8rjNNp+,Y!F=Mm{+ aLqT XG;%vNTt7(h#pS/|_%9BB"KY-KWtY-tMnKRg5BwMJ|PWQzUL!nn]q;R:#+J\R@+CkwF#;?j!=<X*R/WS:GLG}!a<F.4yhY>pR /m?ynwQI#&rZs.>BoW]ms%7) !bXqPX<?47/-irJogA 1yB#R;paA)&[D$6RT*nsX(>e-3L86m8GhudV2pSm5YKZ]{.M'8\`ZzagII;_8nC<eCr36G#e<NA5Kibl$@hxWf|"19|d)["* 1XPr[8KEs`,__4};9wr!u1LK/Lnjiy&6mW*J+U+ R7y3KxN .C;?nhj}P[%;pEQ_8vECgPD;#YhhT9i|v&=f*D![!@v-ed( \MC_9#{<]e@M:+e22$4<b53c
+
+Benchmark for: sequential_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 18441.300000 ns
+System CPU time: 0.000000 ns
+Real time: 18476.000000 ns
+
+Benchmark for: alternately_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 12279.800000 ns
+System CPU time: 96.900000 ns
+Real time: 12405.600000 ns
+
+gcc -fPIC -Wall -Os  -c d_test.c
+gcc -fPIC -Wall -Os  -c d_lib.c
+gcc -fPIC -Wall -Os  -c d_lib_internal.c
+ar  cr libex1.a d_lib.o d_lib_internal.o
+gcc  -static -o s_test d_test.o -L. -lex1
+gcc -fPIC -Wall -Os  -shared -o libex1.so d_lib.o d_lib_internal.o
+gcc  -o d_test d_test.o -L. -lex1
+gcc -fPIC -Wall -Os  -DDYNAMIC_LOAD=1 -c d_test.c -o d_test_dl.o
+gcc -fPIC -Wall -Os  -c d_lib_dl.c
+gcc  -o d_test_dl d_test_dl.o d_lib_dl.o -ldl
+LD_LIBRARY_PATH=. ./d_test 500 500 -d c m20 s200 a200
+Benchmark for: create_array
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 389.800000 ns
+System CPU time: 1903.900000 ns
+Real time: 2321.800000 ns
+
+Benchmark for: closest_match
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 152275.700000 ns
+System CPU time: 0.000000 ns
+Real time: 152723.100000 ns
+
+Closest match to
+5?x3vqyx4`G!S9(VC#xV3:vQk'2)ge28A,K99FMgB0i1Iqh(t|xC8qu@4Cc7*uOe=6:Wvh@:xEf^8P".h{R"*c\>(BVLSAN-Xh jlZAg")a:s}c]zQy&PX_r67Z%r*Lf/LS{C0 E9{yH{x'3e<:7tyEFL"fZF4Co{2m@B)!u'6?>1`Qv|'J/"oUh-WEn($_%Ph_rr`i52DSC&@V$H"3J-%O;\0+ Nj? o .cz34/W#l]CD{k`1RnP=+HMPI7Vh7G%_F!rtJKw9DWwADZR2d$Oog8[2O3z"u!a==U4g<G<` P$_,pqp1]{xur,a'B}8^{V7l&:+gW'h)EIO8V[c5r]Gf%D)aCB[Z4rI:/T="u'+=jtU]QT.EMUGR5POsr-O(;x\JhzL`=q}Dgn=TDK5q=\_R/JG=q3F/->Y2TBr.5-R97o)uV?$s{}HFI+d=>FffdAx;}(I5O7hfBqwx2{nJzRp_wp|88d:9B4nA<Sp'jtmHh"B6}L`5 
+is
+x)&|\q/!yK'Rt8iP$*>h\@F/M\$0a&\uI|t'p?('jJZ`bELgikQH-wWtp[AS{}eF8ug*6p1#V'}:fL#RSozzhmpZKMJbM1E!(.EX:p[pxu-`CJN2;d.@T:6;h`}Q-DROmw*)ie6}\]z;)Jg_1u;e2Q"6N;gu`;GiNQr9R*9Kg5f-yj(FaC-/0IEx!Hp{c9fM&Z#X!<%$k(K"rSIo2p;]<`WW+cT*8<X>2[3M3RR:Z9<h)!t;r14J-(#8kW]@/Q^[H-+[`w1V2g[;iQqwb'Co/`D7S=WbnQ?R_dI[]Z3,]nabAT[?v:KAz+rOHeMR9)&4mOogE$/$/pgja^,syq6u|+G`,04E9Ts)?d,d%;$4G' *fF}a9PXQu;3#LaceQX*p?Pp^ku.O|.Ydosa*EVvVq+YY)>[Z3!glRYLYjZ*%$d%ssg::?2,LWe(z@cWSdZARO).<c8A#8Fw-/Mah_m7RU?O1>B >|Aqgd!%I9`LR)_yR.]W)Ln\=
+
+Benchmark for: sequential_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 18954.400000 ns
+System CPU time: 0.000000 ns
+Real time: 18991.300000 ns
+
+Benchmark for: alternately_replace
+------------------------------------
+Array length: 500
+Block length: 500
+Static allocation: false
+------------------------------------
+User CPU time: 12444.600000 ns
+System CPU time: 0.000000 ns
+Real time: 12470.100000 ns
+
+
+
+/////////////////////
+W otrzymanych wynikach widac, ze zastosowanie flagi -O2 zamiast -O0 znacznie zmniejszylo czas wszystkich rodzajow operacji.
+Flaga -Os nie miała znaczacego wplywu na czas wzgledem -O2 -
+ jest stosowana do optymalizacji rozmiaru.

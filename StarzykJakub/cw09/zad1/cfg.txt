@@ -1,0 +1,6 @@
+10 2 1000
+pan-tadeusz.txt
+0
+>
+simple
+2

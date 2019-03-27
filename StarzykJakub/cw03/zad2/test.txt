@@ -1,0 +1,4 @@
+ls -l
+touch ./mvtest
+cp ./mvtest ./mvtest2
+less test.txt

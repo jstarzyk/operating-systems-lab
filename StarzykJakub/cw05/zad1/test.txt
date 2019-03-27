@@ -1,0 +1,4 @@
+cat main.c | grep include
+ls -l
+echo "aaa" | grep hello
+ls -l | head | grep main

@@ -1,0 +1,10 @@
+Format argumentow: <dlugosc tablicy> <dlugosc bloku> <"-d" (alokacja dynamicza) lub "-s" (alokacja statyczna)> <lista operacji>
+
+Operacje to:
+    c - utworzenie tablicy
+    m<n> - wyszukanie najbardziej podobnego elementu do tego o indeksie n w tablicy
+    s<n> - sekwencyjne usuwanie i dodawanie n blokow
+    a<n> - naprzemienne usuwanie i dodawanie n blokow
+    
+Na przyklad:
+zad3a/s_test 100 200 -d c m5 s20

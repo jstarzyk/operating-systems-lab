@@ -1,0 +1,4 @@
+MIRROR "hello world!"
+CALC ADD 2 3
+TIME
+MIRROR "skjdksdjslkfj"

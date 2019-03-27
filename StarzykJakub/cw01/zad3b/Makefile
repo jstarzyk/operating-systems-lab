@@ -1,0 +1,16 @@
+CC := gcc
+LD := gcc
+AR := ar
+CFLAGS := -fPIC -Wall
+OPTIMIZE_FLAG :=
+LDFLAGS :=
+ARFLAGS :=
+LIBPATH=../zad1
+TESTPATH=../zad2
+DEPENDS=../zad3a
+
+all: zad3a
+	LD_LIBRARY_PATH=$(LIBPATH) $(DEPENDS)/d_test 500 500 -d c m20 s200 a200
+
+zad3a:
+	$(MAKE) OPTIMIZE_FLAG=$(OPTIMIZE_FLAG) -C $(DEPENDS)
